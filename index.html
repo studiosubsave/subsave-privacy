@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SubSave — Privacy Policy</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; color: #1a1a1a; line-height: 1.7; }
+    h1 { font-size: 24px; font-weight: 600; margin-bottom: 4px; }
+    h2 { font-size: 17px; font-weight: 600; margin-top: 32px; }
+    p, li { font-size: 15px; color: #333; }
+    li { margin-bottom: 4px; }
+    .date { color: #666; font-size: 14px; margin-bottom: 32px; }
+    a { color: #1a73e8; }
+  </style>
+</head>
+<body>
+
+<h1>SubSave — Privacy Policy</h1>
+<p class="date">Effective date: June 14, 2025 &nbsp;|&nbsp; Last updated: June 14, 2025</p>
+
+<p>SubSave ("the App") is a personal subscription tracker developed by Alex (the "Developer"). This Privacy Policy explains what data the App accesses, how it is used, and how it is protected.</p>
+
+<h2>1. Data We Access</h2>
+<p>The App may access the following information solely on your device:</p>
+<ul>
+  <li><strong>Notifications</strong> — The App reads notification content from apps you approve in order to automatically detect subscription charges (e.g. payment confirmations from banking or service apps). The App does <em>not</em> read notifications from messaging apps (WhatsApp, Telegram, Viber, Signal, etc.).</li>
+  <li><strong>Subscription data you enter</strong> — Names, amounts, billing dates, and categories of subscriptions you manually add.</li>
+  <li><strong>AI provider API keys</strong> — If you choose to use AI Insights, you enter your own Gemini or OpenRouter API key. These keys are stored encrypted on your device using AES-256-GCM (EncryptedSharedPreferences).</li>
+</ul>
+
+<h2>2. Data We Do NOT Collect</h2>
+<ul>
+  <li>The App does <strong>not</strong> transmit notification content to any server.</li>
+  <li>The App does <strong>not</strong> collect your name, email address, phone number, or location.</li>
+  <li>The App does <strong>not</strong> use analytics SDKs, advertising SDKs, or crash reporting services that send data externally.</li>
+  <li>The App does <strong>not</strong> access contacts, call logs, SMS messages, camera, or microphone.</li>
+</ul>
+
+<h2>3. How Notification Access Is Used</h2>
+<p>The App requests <em>Notification Access</em> (a special Android permission) exclusively to detect potential subscription charges in notification text from banking, payment, and subscription service apps. Processing happens entirely on your device. Notification content is:</p>
+<ul>
+  <li>Parsed locally to extract service name and charge amount.</li>
+  <li>Stored locally in an encrypted Room database on your device.</li>
+  <li>Never transmitted to any server or third party.</li>
+</ul>
+<p>You can revoke Notification Access at any time in <em>Settings → Special app access → Notification access → SubSave → Off</em>.</p>
+
+<h2>4. Exact Alarms</h2>
+<p>The App uses Android's exact alarm permission (<code>USE_EXACT_ALARM</code>) to deliver subscription payment reminders at the precise time you configured. This permission is used solely for local notifications — no network access is involved.</p>
+
+<h2>5. AI Insights (Optional Feature)</h2>
+<p>If you enable AI Insights, the App sends anonymised subscription summary data (service names, amounts, billing cycles — no personal identifiers) to a third-party AI provider you select (Google Gemini or OpenRouter). This feature is opt-in and can be disabled at any time in Settings. Review the privacy policy of your chosen provider for details on how they process data.</p>
+
+<h2>6. Data Storage and Security</h2>
+<ul>
+  <li>All app data is stored locally on your device.</li>
+  <li>API keys are encrypted with AES-256-GCM using the Android Keystore.</li>
+  <li>App lock passwords are stored as PBKDF2 hashes (100,000 iterations) — plain-text passwords are never stored.</li>
+  <li>Sensitive preferences are excluded from Android Auto Backup and cloud transfer.</li>
+</ul>
+
+<h2>7. Third-Party Services</h2>
+<p>The App may connect to the following external services only when you explicitly use the relevant feature:</p>
+<ul>
+  <li><strong>Google Gemini API</strong> — for AI Insights (optional, requires your own API key).</li>
+  <li><strong>OpenRouter API</strong> — for AI Insights (optional, requires your own API key).</li>
+  <li><strong>Exchange rate API</strong> — to fetch current currency exchange rates for cost display.</li>
+</ul>
+
+<h2>8. Children's Privacy</h2>
+<p>The App is not directed at children under 13. We do not knowingly collect any personal information from children.</p>
+
+<h2>9. Changes to This Policy</h2>
+<p>We may update this Privacy Policy. Any changes will be posted on this page with an updated effective date. Continued use of the App after changes constitutes acceptance of the new policy.</p>
+
+<h2>10. Contact</h2>
+<p>If you have any questions about this Privacy Policy, please contact the developer at: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+
+</body>
+</html>
